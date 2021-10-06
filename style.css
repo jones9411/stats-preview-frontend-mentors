@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+}
+
+body {
+  background-color: #0a0c1c;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  line-height: 1.5em;
+  overflow-x: hidden;
+}
+
+.container {
+  background-color: #1b1937;
+  border-radius: 8px;
+  width: 90vw;
+  margin: auto;
+  height: 880px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "logo-img"
+    "article-text";
+}
+
+.logo-img {
+  grid-area: logo-img;
+  background-image: url("./images/image-header-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.img-overlay {
+  height: 100%;
+  width: 100%;
+  background-color: #ab5cdb;
+  opacity: 0.4;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.article-text {
+  text-align: center;
+  display: grid;
+  /* grid-template-columns: max-content; */
+  grid-template-rows: 0.9fr 0.9fr 0.9fr;
+  /* gap: 0px 0px; */
+  grid-template-areas:
+    "header-text"
+    "intro-text"
+    "stat-card";
+  grid-area: article-text;
+  align-items: center;
+}
+
+.header-text {
+  grid-area: header-text;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* width: 88vw; */
+  margin: auto;
+}
+
+.header-text h1 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.5em;
+  align-items: center;
+  padding: 5px 35px;
+}
+.insights-color {
+  color: #ab5cdb;
+}
+
+.intro-text {
+  grid-area: intro-text;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* width: 86vw; */
+  margin: auto;
+  padding: 5px 25px;
+}
+
+.stat-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "companies templates queries";
+  grid-area: stat-card;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.companies {
+  grid-area: companies;
+  font-family: "Lexend Deca";
+}
+.templates {
+  grid-area: templates;
+  font-family: "Lexend Deca";
+}
+.queries {
+  grid-area: queries;
+  font-family: "Lexend Deca";
+}
+
+.light-grey-text {
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+.small-mg {
+  margin: 15px 20px;
+}
+
+@media all and (min-width: 788px) {
+  .container {
+    width: 1110px;
+    height: 447px;
+    margin: 10% auto;
+    display: grid;
+    grid-template-columns: 1.85fr 1.15fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "article-text logo-img";
+  }
+
+  .logo-img,
+  .img-overlay {
+    grid-area: logo-img;
+    height: 447px;
+    width: 446px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 8px;
+  }
+  .logo-img {
+    background-image: url("./images/image-header-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .article-text {
+    grid-area: article-text;
+    height: 447px;
+    width: 570px;
+  }
+
+  .header-text h1 {
+    font-size: 32px;
+    padding: 20px 50px;
+    text-align: left;
+  }
+
+  .intro-text {
+    font-size: 20px;
+    padding: 5px 50px;
+    text-align: left;
+  }
+
+  .stat-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 100px;
+    grid-template-areas: "companies templates queries";
+    grid-area: stat-card;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    padding: 25px;
+  }
+}
